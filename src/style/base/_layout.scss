@@ -1,0 +1,13 @@
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.p-wrapper {
+  background: map-get($colors, "color-body");
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
+
+  @include breakpointUi(lt-xl) {
+    overflow: hidden;
+  }
+}
+

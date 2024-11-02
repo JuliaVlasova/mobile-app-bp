@@ -1,0 +1,14 @@
+@use "../variables/heading" as *;
+
+// @example scss
+// @include heading('1');
+
+@mixin heading(
+  $size: null,
+) {
+  margin-top: 0;
+  font-size: map-get($heading--font-size, $size);
+  line-height: map-get($heading--line-heights, $size);
+  font-weight: $heading-font-weight;
+  font-family: $heading-font-family;
+}

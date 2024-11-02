@@ -1,0 +1,49 @@
+@use '../variables/variables' as *;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+	margin: 0;
+}
+
+a {
+	border: none;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+input[type="submit"],
+input[type="button"] {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+	font-family: $base-font-family;
+}
+
+input {
+	font-family: $base-font-family;
+}
+
+*,
+:after,
+:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

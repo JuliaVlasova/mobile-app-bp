@@ -1,0 +1,63 @@
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.banner {
+ 
+  @include breakpointUi(lt-xl) {
+    padding: 0 20px 0;
+  }
+
+  @include breakpointUi(lt-md) {
+  
+  }
+
+  &__close {
+    --size: 21px;
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &__popup {
+
+
+
+    @include breakpointUi(lt-xl) {
+      
+    }
+
+    @include breakpointUi(lt-md) {
+      
+    }
+  }
+
+  &__heading {
+    @include heading("1");
+    text-align: center;
+    margin: 0 0 30px;
+    
+
+    @include breakpointUi(lt-xl) {
+    }
+
+    @include breakpointUi(lt-md) {
+     
+    }
+  }
+
+
+
+  &__button {
+    
+    margin: 0 auto;
+
+    @include breakpointUi(lt-md) {
+     
+    }
+  }
+}
+
+

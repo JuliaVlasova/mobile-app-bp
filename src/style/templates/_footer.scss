@@ -1,0 +1,16 @@
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.p-footer {
+  
+
+  @include breakpointUi(lt-xl) {
+   
+  }
+
+  a {
+   
+  }
+
+ 
+}

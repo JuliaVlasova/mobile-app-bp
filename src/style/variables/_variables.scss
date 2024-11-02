@@ -1,0 +1,7 @@
+@use "colors" as *;
+@use "text" as *;
+@forward "text";
+
+$base-font-family: "stolzl-regular", Arial, sans-serif;
+$base-font-size: map-get($text--size, "sm");
+$base-line-height: 1.5;
