@@ -47,7 +47,6 @@ async function applyTranslations() {
   // Проходим по каждому элементу и выполняем замену
   elements.forEach((element) => {
     let innerText = element.innerHTML;
-    console.log(innerText);
 
     // Проверяем каждую пару ключ-значение в translations
     for (const [oldText, newText] of Object.entries(translations)) {

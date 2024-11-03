@@ -19,8 +19,14 @@
   }
 
   .banner {
-    .offer-info__item {
-      padding: 6px 44px 6px 23px;
+    .offer-info {
+      &__item {
+        padding: 6px 32px 6px 23px;
+      }
+
+      &__title {
+        font-size: 14px;
+      }
     }
   }
 
@@ -41,10 +47,36 @@
       font-size: 10px;
     }
   }
+
+  .banner {
+    .offer-info {
+      &__item {
+        padding: 6px 32px 6px 23px;
+      }
+
+      &__title {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @include lang-select(es) {
   .banner-footer {
     gap: 18px;
+  }
+
+  .banner {
+    .offer-info__item {
+      padding: 6px 44px 6px 23px;
+    }
+  }
+}
+
+@include lang-select(pt) {
+  .banner {
+    .offer-info__item {
+      padding: 6px 44px 6px 23px;
+    }
   }
 }
