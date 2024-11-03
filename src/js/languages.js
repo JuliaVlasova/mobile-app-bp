@@ -56,4 +56,4 @@ async function applyTranslations() {
   });
 }
 
-window.onload = applyTranslations;
+applyTranslations();
