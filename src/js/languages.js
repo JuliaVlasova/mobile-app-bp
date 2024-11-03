@@ -55,7 +55,6 @@ async function applyTranslations() {
     element.innerHTML = innerText;
   });
 }
-addEventListener("DOMContentLoaded", () => {
-  // Выполнение
-  applyTranslations();
-});
+
+// Выполнение
+applyTranslations();
