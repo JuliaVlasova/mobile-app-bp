@@ -1,0 +1,32 @@
+// select lang,
+// default select - en
+// example - @include lang-select(ru) {@content}
+@mixin lang-select($lang: en) {
+  html {
+    &:lang(#{$lang}) {
+      @content;
+    }
+  }
+}
+
+// not selected lang,
+// @descriptions: global styles - all languages except the selected language
+@mixin not-selected($lang: en) {
+  html {
+    &:not([lang="#{$lang}"]) {
+      @content;
+    }
+  }
+}
+
+// multi select language,
+// example - @include multi-select(ru, de, fr, pl, ja, ko) {@content}
+@mixin multi-select($langValue...) {
+  html {
+    @each $i in $langValue {
+      &:lang(#{$i}) {
+        @content;
+      }
+    }
+  }
+}
