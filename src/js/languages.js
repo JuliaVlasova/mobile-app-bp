@@ -18,6 +18,12 @@ if (!supportedLanguages.includes(selectedLang)) {
   selectedLang = "en";
 }
 
+// Заменить в теге html атрибут lang
+function handleHtmlLang() {
+    let htmlTag = document.documentElement;
+    htmlTag.setAttribute('lang', selectedLang); 
+}
+
 // Функция для загрузки перевода
 async function loadTranslations(lang) {
   try {
@@ -57,5 +63,6 @@ async function applyTranslations() {
 }
 
 addEventListener("DOMContentLoaded", () => {
+    handleHtmlLang();
     applyTranslations();
 });

@@ -6,11 +6,16 @@ addEventListener("DOMContentLoaded", () => {
   let weeklyPrice = 6.99;
 
   let currencySymbol = "$"; 
-  let formattedPrice = 'Just ' + currencySymbol + price.toFixed(2) + ' per year';
-  let formattedWeeklyPriceBest = currencySymbol + weeklyPriceBest.toFixed(2) + '<br>per week';
-  let formattedWeeklyPrice = currencySymbol + weeklyPrice.toFixed(2) + '<br>per week';
+  let formattedPrice = currencySymbol + price.toFixed(2);
+  let formattedWeeklyPriceBest = currencySymbol + weeklyPriceBest.toFixed(2);
+  let formattedWeeklyPrice = currencySymbol + weeklyPrice.toFixed(2);
 
-  document.getElementById('yearly-access-price').innerHTML = formattedPrice;
-  document.getElementById('weekly-price-best').innerHTML = formattedWeeklyPriceBest;
-  document.getElementById('weekly-price').innerHTML = formattedWeeklyPrice;
+  function handlePrice(item, finalPrice) {
+    let priceBlock = document.getElementById(item);
+    priceBlock.innerHTML = priceBlock.innerHTML.replace('{{price}}', finalPrice);
+  }
+
+  handlePrice('yearly-access-price', formattedPrice);
+  handlePrice('weekly-price-best', formattedWeeklyPriceBest);
+  handlePrice('weekly-price', formattedWeeklyPrice);
 });
