@@ -56,5 +56,6 @@ async function applyTranslations() {
   });
 }
 
-// Выполнение
-applyTranslations();
+document.addEventListener('DOMContentLoaded', async () => {
+    await applyTranslations();
+});
