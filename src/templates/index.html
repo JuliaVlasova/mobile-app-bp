@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Medical Technologies - Юлия Власова">
+    <meta name="description" content="BP Mobile - Julia Vlasova">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Medical Technologies - Юлия Власова</title>
+    <title>BP Mobile - Julia Vlasova</title>
     <link href="src/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="output/css/global.min.css" type="text/css" />
     <link rel="preload" as="style" href="src/style/fonts/fonts.css" type="text/css" />
     <link rel="stylesheet" href="src/style/fonts/fonts.css" type="text/css" />
-    <!-- Swiper library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" type="text/css" />
-    <!-- Fancybox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer="defer"></script>
 </head>
 
 <body>
-    <div class="p-wrapper" id="top">
-        @@include('./banner.html')
-        @@include('./footer.html')
+    <div class="p-wrapper">
+        <div class="banner">
+        @@include('./banner-top.html')
+        @@include('./banner-gallery.html')
+        @@include('./banner-offer.html')
+        @@include('./banner-footer.html')
+        </div>
     </div>
 
     <svg width="0" height="0" class="hidden">
@@ -32,7 +29,8 @@
         </symbol>
     </svg>
 
-    <script src="output/js/script.min.js" type="text/javascript" defer="defer"></script>
+    <script src="output/js/offer-button.min.js" type="text/javascript" defer="defer"></script>
+    <script src="output/js/languages.min.js" type="text/javascript" defer="defer"></script>
 </body>
 
 </html>

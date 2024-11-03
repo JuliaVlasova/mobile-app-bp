@@ -1,8 +1,6 @@
 @use "colors" as *;
 
-$heading-color: map-get($colors, "main");
-$heading-font-weight: 400;
-$heading-font-family: "stolzl-bold", Arial, sans-serif;
+$heading-font-weight: 860;
 
 $heading--font-size: (
   "1": 42px,

@@ -1,7 +1,9 @@
 @use 'base/normalize' as *;
 @use 'base/layout' as *;
 
-@use 'templates/banner' as *;
-@use 'templates/footer' as *;
+@use 'templates/banner-top' as *;
+@use 'templates/banner-gallery' as *;
+@use 'templates/banner-offer' as *;
+@use 'templates/banner-footer' as *;
 
 @use 'base/mobile' as *;

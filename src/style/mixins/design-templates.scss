@@ -1,9 +1,78 @@
-@use "../variables/heading" as *;
+@use "../variables/variables" as *;
 
 // @example scss
-// @include iphone('2');
+// @include iphone('@2x');
 
-@mixin iphone() {
- 
+@mixin iphone($x) {
+  .banner {
+    background: url("../../output/background/bg#{$x}.png") no-repeat center top;
+    background-size: cover;
+
+    @if($x == '@2x') {
+      padding-top: 120px;
+      padding-bottom: 10px;
+      background-position: center -34px;
+    } @else if($x == '@3x') {
+      padding-top: 242px;
+      padding-bottom: 30px;
+    } @else {
+      padding-top: 120px;
+      padding-bottom: 30px;
+    }
+
+    &__close-link {
+      @if($x == '@2x') {
+        top: 36px;
+      } @else if($x == '@3x') {
+        top: 70px;
+      } @else {
+        top: 36px;
+      }
+    }
+
+    .offer-gallery {
+      @for $i from 1 through $gallery-children {
+        &__item {
+          &:nth-child(#{$i}) {
+            background: url("../../output/background/f#{$i}#{$x}.png")
+              no-repeat
+              center
+              top;
+            background-size: cover;
+          }
+        }
+      }
+
+      @if($x == '@2x') {
+        gap: 10px;
+        margin-bottom: 38px;
+      } @else if($x == '@3x') {
+        gap: 10px;
+        margin-bottom: 50px;
+      } @else {
+        gap: 10px;
+        margin-bottom: 38px;
+      }
+    }
+
+    .offer-info {
+      @if($x == '@2x') {
+        padding-bottom: 30px;
+      } @else if($x == '@3x') {
+        padding-bottom: 43px;
+      } @else {
+        padding-bottom: 30px;
+      }
+
+      &__column {
+        @if($x == '@2x') {
+          margin-bottom: 10px;
+        } @else if($x == '@3x') {
+          margin-bottom: 20px;
+        } @else {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
-

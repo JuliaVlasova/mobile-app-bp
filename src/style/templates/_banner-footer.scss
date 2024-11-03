@@ -1,0 +1,15 @@
+@use "../variables/_colors" as *;
+@use "../mixins/mixins" as *;
+
+.banner-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  &__item {
+    @include text("color-white", "sm");
+    letter-spacing: 0.58px;
+    opacity: 0.5;
+  }
+}
