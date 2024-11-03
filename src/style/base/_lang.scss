@@ -51,7 +51,7 @@
   .banner {
     .offer-info {
       &__item {
-        padding: 6px 32px 6px 23px;
+        padding: 6px 16px 6px 23px;
       }
 
       &__title {
@@ -76,7 +76,15 @@
 @include lang-select(pt) {
   .banner {
     .offer-info__item {
-      padding: 6px 44px 6px 23px;
+      padding: 6px 26px 6px 23px;
+    }
+  }
+}
+
+@include lang-select(ja) {
+  .banner  {
+    .offer-info__item {
+      min-height: 53px;
     }
   }
 }
