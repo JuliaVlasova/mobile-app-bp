@@ -17,4 +17,34 @@
     line-height: 1.2;
     max-width: 100%;
   }
+
+  .banner {
+    .offer-info__item {
+      padding: 6px 44px 6px 23px;
+    }
+  }
+
+  .banner-footer {
+    gap: 10px;
+
+    &__item {
+      font-size: 11px;
+    }
+  }
+}
+
+@include lang-select(fr) {
+  .banner-footer {
+    gap: 10px;
+
+    &__item {
+      font-size: 10px;
+    }
+  }
+}
+
+@include lang-select(es) {
+  .banner-footer {
+    gap: 18px;
+  }
 }
