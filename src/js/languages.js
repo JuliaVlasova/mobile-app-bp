@@ -22,7 +22,7 @@ addEventListener("DOMContentLoaded", () => {
   // Функция для загрузки перевода
   async function loadTranslations(lang) {
     try {
-      const response = await fetch(`${lang}.json`);
+      const response = await fetch(`src/json/${lang}.json`);
       if (!response.ok) throw new Error("Network response was not ok");
       return await response.json();
     } catch (error) {
