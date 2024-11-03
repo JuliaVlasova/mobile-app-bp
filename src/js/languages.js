@@ -56,6 +56,4 @@ async function applyTranslations() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    await applyTranslations();
-});
+window.onload = applyTranslations;
