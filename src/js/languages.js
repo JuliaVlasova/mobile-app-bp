@@ -62,7 +62,40 @@ async function applyTranslations() {
   });
 }
 
-addEventListener("DOMContentLoaded", () => {
-    handleHtmlLang();
-    applyTranslations();
-});
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`Could not load script: ${src}`));
+        document.head.append(script);
+    });
+}
+
+function setPrices() {
+    let price = 39.99;
+    let weeklyPriceBest = 0.48;
+    let weeklyPrice = 6.99;
+  
+    let currencySymbol = "$"; 
+    let formattedPrice = currencySymbol + price.toFixed(2);
+    let formattedWeeklyPriceBest = currencySymbol + weeklyPriceBest.toFixed(2);
+    let formattedWeeklyPrice = currencySymbol + weeklyPrice.toFixed(2);
+  
+    function handlePrice(item, finalPrice) {
+      let priceBlock = document.getElementById(item);
+      priceBlock.innerHTML = priceBlock.innerHTML.replace('{{price}}', finalPrice);
+    }
+  
+    handlePrice('yearly-access-price', formattedPrice);
+    handlePrice('weekly-price-best', formattedWeeklyPriceBest);
+    handlePrice('weekly-price', formattedWeeklyPrice);
+}
+
+async function loadScripts() {
+    await handleHtmlLang();
+    await applyTranslations();
+    setPrices();
+}
+
+document.addEventListener('DOMContentLoaded', loadScripts);
