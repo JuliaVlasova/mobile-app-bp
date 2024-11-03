@@ -56,4 +56,6 @@ async function applyTranslations() {
   });
 }
 
-applyTranslations();
+addEventListener("DOMContentLoaded", () => {
+    applyTranslations();
+});
