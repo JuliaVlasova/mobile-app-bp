@@ -5,7 +5,7 @@
 .banner {
   .offer-gallery {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
     &__item {
       padding: 10px 10px 3px 7px;

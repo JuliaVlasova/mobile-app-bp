@@ -1,12 +1,8 @@
 @use "../mixins/mixins" as *;
-// Разный паддинг, 
-// разное разрешение у bg - засунуть в design-templates, 
-// .banner__close  top left
-// .offer-gallery gap
 
 @include iphone('@3x');
 
-/* Медиа-запрос для iPhone SE */
+/* iPhone SE */
 @media only screen 
   and (min-width: 320px) 
   and (max-width: 375px) 
@@ -15,7 +11,7 @@
     @include iphone('@2x');
 }
 
-/* Медиа-запрос для iPhone 8 Plus */
+/* iPhone 8 Plus */
 @media only screen 
   and (min-width: 375px) 
   and (max-width: 414px) 

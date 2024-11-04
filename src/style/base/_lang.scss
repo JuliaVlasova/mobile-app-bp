@@ -83,8 +83,8 @@
 
 @include lang-select(ja) {
   .banner  {
-    .offer-info__item {
-      min-height: 53px;
+    .offer-info__row {
+      min-height: 40px;
     }
   }
 }
