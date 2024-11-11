@@ -2,7 +2,6 @@
 @use "text" as *;
 @forward "text";
 
-$base-font-family: "sf-pro", Arial, sans-serif;
 $base-font-size: map-get($text--size, "sm");
 $base-line-height: 1.5;
 

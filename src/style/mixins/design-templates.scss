@@ -5,14 +5,14 @@
 
 @mixin iphone($x) {
   .banner {
-    background: url("../../output/background/bg#{$x}.png") no-repeat center top;
+    background: url("../../output/background/bg#{$x}.jpg") no-repeat center top;
     background-size: cover;
 
-    @if($x == '@2x') {
+    @if ($x == "@2x") {
       padding-top: 120px;
       padding-bottom: 10px;
       background-position: center -34px;
-    } @else if($x == '@3x') {
+    } @else if($x == "@3x") {
       padding-top: 242px;
       padding-bottom: 30px;
     } @else {
@@ -21,9 +21,9 @@
     }
 
     &__close-link {
-      @if($x == '@2x') {
+      @if ($x == "@2x") {
         top: 36px;
-      } @else if($x == '@3x') {
+      } @else if($x == "@3x") {
         top: 70px;
       } @else {
         top: 36px;
@@ -34,19 +34,18 @@
       @for $i from 1 through $gallery-children {
         &__item {
           &:nth-child(#{$i}) {
-            background: url("../../output/background/f#{$i}#{$x}.png")
-              no-repeat
-              center
-              top;
+            background: url("../../output/background/f#{$i}#{$x}.jpg")
+              no-repeat -1px -1px;
             background-size: cover;
+            border-radius: 13px;
           }
         }
       }
 
-      @if($x == '@2x') {
+      @if ($x == "@2x") {
         gap: 10px;
         margin-bottom: 38px;
-      } @else if($x == '@3x') {
+      } @else if($x == "@3x") {
         gap: 10px;
         margin-bottom: 50px;
       } @else {
@@ -56,18 +55,18 @@
     }
 
     .offer-info {
-      @if($x == '@2x') {
+      @if ($x == "@2x") {
         padding-bottom: 30px;
-      } @else if($x == '@3x') {
+      } @else if($x == "@3x") {
         padding-bottom: 43px;
       } @else {
         padding-bottom: 30px;
       }
 
       &__column {
-        @if($x == '@2x') {
+        @if ($x == "@2x") {
           margin-bottom: 10px;
-        } @else if($x == '@3x') {
+        } @else if($x == "@3x") {
           margin-bottom: 20px;
         } @else {
           margin-bottom: 10px;

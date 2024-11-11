@@ -63,7 +63,6 @@
     &__title {
       @include text("color-white", "md", "600");
       text-transform: uppercase;
-      font-family: "sfprodisplaymedium", Arial, sans-serif;
     }
 
     &__per-year,
@@ -81,10 +80,9 @@
     padding: 15px 20px;
     margin: 0 auto;
     text-align: center;
-    @include text("color-button", "lg");
+    @include text("color-button", "lg", "590");
     background: map-get($colors, "color-white");
     border-radius: 32px;
-    font-family: "sf-pro-semibold", Arial, sans-serif;
     letter-spacing: 1px;
   }
 }
