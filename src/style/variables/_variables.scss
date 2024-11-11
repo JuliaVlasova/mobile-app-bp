@@ -2,6 +2,7 @@
 @use "text" as *;
 @forward "text";
 
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $base-font-size: map-get($text--size, "sm");
 $base-line-height: 1.5;
 

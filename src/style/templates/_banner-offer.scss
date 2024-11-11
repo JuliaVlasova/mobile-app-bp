@@ -61,7 +61,8 @@
     }
 
     &__title {
-      @include text("color-white", "md", "600");
+      @include text("color-white", "md");
+      font-weight: 600;
       text-transform: uppercase;
     }
 
@@ -80,7 +81,8 @@
     padding: 15px 20px;
     margin: 0 auto;
     text-align: center;
-    @include text("color-button", "lg", "590");
+    @include text("color-button", "lg");
+    font-weight: 590;
     background: map-get($colors, "color-white");
     border-radius: 32px;
     letter-spacing: 1px;
